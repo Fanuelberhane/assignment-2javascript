@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment 2</title>
+</head>
+<body>
+<div>
+    <img id="switchimage" src="blub2.jpg" height="300" width="300">
+    
+    <br>
+
+    <button onclick="changeImage('blub2.jpg')"> Turn on the light </button> &nbsp; &nbsp;&nbsp;&nbsp;
+    <button onclick="changeImage('blub1.jpg')"> Turn off the light</button>
+</div>
+<br>
+<br>
+
+<button type="button" onclick="displayDate()">Current Time </button>
+
+<P id="showDate"> </P>
+<br>
+<br>
+
+<form>
+    <input type="text" id="input">
+   
+    <button type="button" onclick="removefristlastString()">Remove strings</button>
+    <p id="result"></p>
+</form>
+
+    <script>
+     
+     function changeImage(filename) {
+
+     let img=  document.querySelector('#switchimage');
+         img.setAttribute('src',filename)
+     }
+      
+function displayDate() {
+    document.getElementById('showDate').innerHTML= Date();
+
+
+
+}
+
+
+function removefristlastString() {
+
+const input=document.getElementById("input");
+const result=document.getElementById("result");
+
+let inputValue=input.value
+
+result.innerHTML=inputValue.slice(1,-1);
+
+}
+        
+
+    </script>
+
+
+    
+</body>
+</html>
